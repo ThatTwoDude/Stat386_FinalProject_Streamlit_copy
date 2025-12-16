@@ -4,9 +4,6 @@ import os
 import json
 import matplotlib.pyplot as plt
 
-# print(os.getcwd())
-
-# url = 'https://github.com/esnt/Data/raw/main/Names/popular_names.csv'
 df = pd.read_csv("../data/Combined_DF.csv")
 
 st.title("Discovering the Relationship Between Divorce and Crime")
