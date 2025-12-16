@@ -1,4 +1,4 @@
-,NAME,population_over_15,married_males_last_year,married_females_last_year,divorced_males_last_year,divorced_females_last_year,state,year,married_last_year,divorced_last_year
+,state,population_over_15,married_males_last_year,married_females_last_year,divorced_males_last_year,divorced_females_last_year,state,year,married_last_year,divorced_last_year
 0,Alabama,3874758,37987,37530,22071.0,28381.0,01,2011,75517,50452.0
 1,Alaska,565162,7766,7771,3398.0,4071.0,02,2011,15537,7469.0
 2,Arizona,5129409,48065,46600,24130.0,30961.0,04,2011,94665,55091.0
