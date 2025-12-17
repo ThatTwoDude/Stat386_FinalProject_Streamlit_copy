@@ -1,14 +1,14 @@
 {
-    "offenses": [
-        "V",
-        "ASS",
-        "BUR",
-        "LAR",
-        "MVT",
-        "HOM",
-        "RPE",
-        "ROB",
-        "ARS",
-        "P"
-    ]
+    "offenses": {
+        "V": "All Violent Crimes",
+        "ASS": "Aggravated Assault",
+        "BUR": "Burglary",
+        "LAR": "Larceny-theft",
+        "MVT": "Motor Vehicle Theft",
+        "HOM": "Homicide",
+        "RPE": "Rape",
+        "ROB": "Robbery",
+        "ARS": "Arson",
+        "P": "All Property Crimes"
+    }
 }
