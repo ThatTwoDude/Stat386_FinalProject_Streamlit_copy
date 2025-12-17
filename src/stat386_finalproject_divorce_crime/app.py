@@ -67,7 +67,11 @@ def main():
         sorted(name_to_code.keys())
     )
     crime_code = name_to_code[crime_name]
-    crime_col = f"{crime_code}_{metric.lower()}"
+    
+    if not crime_code.endswith(metric.lower()):
+        crime_col = f"{crime_code}_{metric.lower()}"
+    else:
+        crime_col = crime_code
 
     state = None
     if not is_national:
@@ -108,15 +112,21 @@ def main():
         lines2, labels2 = ax2.get_legend_handles_labels()
         ax1.legend(lines1 + lines2, labels1 + labels2, loc="best")
 
-        st.pyplot(fig)
-
     else:  # Histogram
+        x_label = "Rate" if metric == "Rate" else "Count"
+        t = f"Distribution of {crime_name} ({metric})"
+        if not is_national:
+            t += f" ({state})"
+        else:
+            t += " (Nationally)"
+
         fig = histogram_maker(
             df=df,
             column=crime_col,
-            title=f"Distribution of {crime_name} ({metric})"
+            title=t,
+            x_label=x_label
         )
-        st.pyplot(fig)
+    st.pyplot(fig)
 
 
 if __name__ == "__main__":

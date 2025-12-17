@@ -74,62 +74,18 @@ def linear_regression_by_marriage_divorce(df : pd.DataFrame, marriage_true : boo
     return model
 
 # Create Histogram
-def histogram_maker(df : pd.DataFrame, column, rate : bool, clearance : bool = False):
-    
-    add_string = ""
-    add_title = ""
-
-    if (clearance):
-        add_string += "_clearence"
-        add_title += " Clearence"
-
-    if (rate):
-        add_string += "_rate"
-        add_title += " Rate"
-        x_label = "Rate"
-    else:
-        addstring += "_actual"
-        x_label = "Count"
-        add_title = " Count"
-
-    match column:
-        case "V":
-            title = "All Violent Crimes"
-        case "ASS": 
-            title = "Aggravated Assault"
-        case "BUR": 
-            title = "Burglary"
-        case "LAR": 
-            title = "Larceny-theft"
-        case "MVT": 
-            title = "Motor Vehicle Theft"
-        case "HOM": 
-            title = "Homicide"
-        case "RPE": 
-            title = "Rape"
-        case "ROB": 
-            title = "Robbery"
-        case "ARS": 
-            title = "Arson"
-        case "P": 
-            title = "All Property Crimes"
-        case "Marriage" :
-            add_string = ""
-            if (rate):
-                column = "marriage_rate_per_1000"
-            else:
-                column = "married_last_year"
-            title = "Marriage"
-        case "Divorce" : 
-            add_string = ""
-            if (rate):
-                column = "divorce_rate_per_1000"
-            else:
-                column = "divorced_last_year"            
-            title = "Divorce"
-   
-    final_col = f"{column}{add_string}"
-
-    return _plot_hist(df, final_col, f"Distribution of {title}{add_title}", x_label)
-
-
+def histogram_maker(
+    df: pd.DataFrame,
+    column: str,
+    title: str,
+    x_label: str,
+):
+    """
+    Create a histogram for a given dataframe column
+    """
+    return _plot_hist(
+        df=df,
+        col=column,
+        title=title,
+        x_label=x_label
+    )
