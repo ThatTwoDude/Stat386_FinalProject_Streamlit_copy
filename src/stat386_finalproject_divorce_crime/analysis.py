@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
-import seaborn as sns
 import statsmodels.formula.api as smf
 from sklearn.linear_model import LassoCV
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
