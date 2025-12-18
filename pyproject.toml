@@ -24,7 +24,8 @@ dependencies = [
     "python-dotenv",
     "statsmodels",
     "sklearn",
-    "scikit-learn"
+    "scikit-learn",
+    "scipy"
 ]
 
 [project.scripts]
