@@ -1,0 +1,9 @@
+streamlit>=1.32
+numpy>=1.23,<2.0
+pandas>=1.5
+matplotlib
+python-dotenv
+statsmodels>=0.14
+scikit-learn
+scipy>=1.9
+statsmodels
