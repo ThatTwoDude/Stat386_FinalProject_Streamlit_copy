@@ -6,3 +6,4 @@ python-dotenv
 statsmodels>=0.14
 scikit-learn
 scipy>=1.9
+statsmodels
