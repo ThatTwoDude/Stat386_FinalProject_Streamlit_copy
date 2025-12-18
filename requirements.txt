@@ -3,7 +3,6 @@ pandas
 numpy
 matplotlib
 dotenv
-seaborn
 statsmodels
 sklearn
 scikit-learn

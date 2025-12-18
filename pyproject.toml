@@ -22,7 +22,6 @@ dependencies = [
     "matplotlib",
     "streamlit",
     "python-dotenv",
-    "seaborn",
     "statsmodels",
     "sklearn",
     "scikit-learn"
